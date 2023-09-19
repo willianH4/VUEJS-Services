@@ -5,21 +5,19 @@
 </ul>
 </template>
 
-<script lang="ts">
-    import { defineComponent } from 'vue';
+<script lang="ts" setup>
+    import { onMounted } from 'vue';
     import PostService from '@/services/PostService';
 
-    export default defineComponent({
-        name: 'PostList',
-        data() {
-            const service = new PostService();
-            const posts = service.getPosts();
-            return { posts, service }
-        },
-        async mounted() {
-             await this.service.fetchAll();
+    const service = new PostService();
+    const posts = service.getPosts();
+
+    onMounted(
+        async() => {
+            await service.fetchAll();
         }
-    })
+    );
+
 </script>
 
 <style scoped>
