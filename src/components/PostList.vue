@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
     import { onMounted } from 'vue';
-    import PostService from '@/services/PostService';
+    import PostService from '@/data/services/PostService';
 
     const service = new PostService();
     const posts = service.getPosts();
@@ -22,6 +22,16 @@
 
 <style scoped>
     .post-list {
-        font-size: 14pt;
+        width: 95vw;
+        height: 75px;
+        padding: 20px;
+        list-style: none;
     }
+
+    .post-list li {
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+
 </style>
