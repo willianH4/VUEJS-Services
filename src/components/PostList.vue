@@ -27,13 +27,18 @@ $border-color: #ccc;
         height: 75px;
         padding: 20px;
         list-style: none;
-    }
 
-    .post-list li {
-        padding: 10px;
-        width: 100%;
-        border: 1px solid $border-color;
-        color: $red;
+        li {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid $border-color;
+            color: $red;
+        }
+
+        li:hover {
+            background-color: darken(#000000, 10%);
+        }
+
     }
 
 </style>
