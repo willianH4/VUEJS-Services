@@ -20,7 +20,8 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+$border-color: #ccc;
     .post-list {
         width: 95vw;
         height: 75px;
@@ -31,7 +32,8 @@
     .post-list li {
         padding: 10px;
         width: 100%;
-        border: 1px solid #ccc;
+        border: 1px solid $border-color;
+        color: $red;
     }
 
 </style>
