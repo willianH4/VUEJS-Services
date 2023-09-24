@@ -28,6 +28,11 @@
                             Services
                         </router-link>
                     </li>
+                    <li class="nav-item me-2">
+                        <router-link to="/blog">
+                            Blog
+                        </router-link>
+                    </li>
                 </ul>
             </div>
         </div>
