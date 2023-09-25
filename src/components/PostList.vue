@@ -1,7 +1,7 @@
 <template>
 <h3>Listado de posts <button class="btn btn-primary">Estilado con bootstrap</button> </h3>
 <ul class="post-list">
-    <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
+    <li  v-for="post in posts" :key="post.id"><router-link :to="{ name: 'post', params: { id: post.id } }">{{ post.title }}</router-link></li>
 </ul>
 </template>
 
@@ -33,6 +33,11 @@ $border-color: #ccc;
             width: 100%;
             border: 1px solid $border-color;
             color: $red;
+
+            a {
+                text-decoration: none;
+            }
+
         }
 
         li:hover {
